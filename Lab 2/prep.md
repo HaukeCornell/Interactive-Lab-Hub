@@ -27,7 +27,7 @@ Download and use the ``pi_image_09-05-23.zip`` file in the Raspberry Pi Imager.
 3. Click the gear icon on the bottom right to open Advanced Settings. In here, you need to make two changes:
 - change the "hostname" to something unique
 - set the password for user "pi" to something unique to you that you can remember
-- do not change any of the other settings (username pi and network should stay as they are)
+- if you are at your own home you add your wifi name and password (this will be appended to the wpa_supplicant.conf)
 
 4. Eject or unmount the microSD card reader, and then remove the SD card from the reader and reinsert it into SD card slot on the Pi: it is located on the bottom (silver rectangle on the right).
 
@@ -44,9 +44,6 @@ Download and use the ``pi_image_09-05-23.zip`` file in the Raspberry Pi Imager.
 #### Connecting to your Pi remotely
 
 Unlike your laptop, the Pi doesn't come with its own keyboard or mouse. While you could plug in a monitor, keyboard, and mouse we will be connecting to your Pi over [SSH](https://en.wikipedia.org/wiki/Secure_Shell). You can do this in [Mac Terminal](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line) or [Windows 10 SSH Client](https://docs.microsoft.com/en-us/windows/terminal/tutorials/ssh). 
-
-*Note: This set up assumes you boot your raspberry pi the first time when on campus or in The House. If you have a screen, mouse and keyboard you can edit the /etc/wpa_supplicant/wpa_supplicant.conf on the pi to make it connect to your home network already now.*
-
 
 1. When you boot up your Pi, the MiniPiTFT should have the following information shown:
 	
@@ -165,7 +162,7 @@ network={
 
 Under "The House" and "RedRover", add your home WiFi name and password to the bottom of the file. 
 
-*If the pi and you are at a new location without external screen and mouse you can also [create a new  E:\wpa_supplicant.conf file]((https://www.glennklockwood.com/sysadmin-howtos/rpi-headless-boot.html)) with your desktop computer directly on the SD card root which will overwrite the network configuration.*
+*If the pi and you are at a new location without external screen and mouse you can also [create a new  E:\wpa_supplicant.conf file]((https://www.glennklockwood.com/sysadmin-howtos/rpi-headless-boot.html)) with your desktop computer directly on the SD card root which will however overwrite the network configuration.*
 
 ### Refresh your knowledge of command line interfaces: 
 
